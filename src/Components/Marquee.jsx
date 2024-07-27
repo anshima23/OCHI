@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function Marquee() {
   return (
-    <div className='w-full bg-[#004D43] h-[25rem]'>
+    <div data-scroll data-scroll-section data-scroll-speed=".1" className='w-full bg-[#004D43] h-[35rem]'>
       <div className='flex gap-10 overflow-hidden whitespace-nowrap h-full items-center'>
         {["We are ochi", "We are ochi", "We are ochi"].map((text, index) => (
           <motion.div 
