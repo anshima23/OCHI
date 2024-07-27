@@ -1,43 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Eyes() {
-  return (
-    <div className='eyes w-full h-screen overflow-hidden relative'>
-      {/* Background image container */}
-      <div className='w-full h-full bg-cover bg-center bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg")]'>
-        {/* Circles */}
-        <div className='absolute top-1/2 left-1/2 flex gap-10 -translate-x-1/2 -translate-y-1/2'>
-          {/* Eye container */}
-          <div className='relative flex items-center justify-center'>
-            {/* Large white circle */}
-            <div className='w-32 h-32 rounded-full bg-white absolute -z-10'></div>
-            {/* Black circle */}
-            <div className='w-24 h-24 rounded-full bg-zinc-900 relative'>
-              {/* Red line through center */}
-              <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='w-full h-2'></div>
-              </div>
-              {/* Small white circle at the leftmost end of the red line */}
-              <div className='w-4 h-4 rounded-full bg-zinc-100 absolute top-1/2 left-0 -translate-y-1/2'></div>
+   /* const [rotate, setRotate] = useState(0);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            let mouseX = e.clientX;
+            let mouseY = e.clientY;
+
+            let deltaX = mouseX - window.innerWidth / 2;
+            let deltaY = mouseY - window.innerHeight / 2;
+
+            let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+            setRotate(angle - 90); // Center of the circle at 0 degrees
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+
+        // Cleanup function
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []); // Empty dependency array means this effect runs only once when the component mounts
+*/
+    return (
+        <div className='eyes w-full h-screen overflow-hidden'>
+            <div className='relative w-full h-full bg-cover bg-center bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg")]'>
+                <div className='absolute flex gap-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                    <div className=' flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-zinc-100 flex items-center justify-center'>
+                        <div className='w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900'>
+                        <div className="line w-full h-10 ">
+                           <div className='w-10 h-10 rounded-full bg-zinc-100'></div>
+                       </div>
+                        </div>
+                    </div>
+                    <div className='flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-zinc-100'>
+                    <div className='w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900'>
+                    <div className="line w-full h-10 ">
+                           <div className='w-10 h-10 rounded-full bg-zinc-100'></div>
+                       </div>
+                    </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div className='relative flex items-center justify-center'>
-            {/* Large white circle */}
-            <div className='w-32 h-32 rounded-full bg-white absolute -z-10'></div>
-            {/* Black circle */}
-            <div className='w-24 h-24 rounded-full bg-zinc-900 relative'>
-              {/* Red line through center */}
-              <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='w-full h-2 '></div>
-              </div>
-              {/* Small white circle at the leftmost end of the red line */}
-              <div className='w-4 h-4 rounded-full bg-zinc-100 absolute top-1/2 left-0 -translate-y-1/2'></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default Eyes;
