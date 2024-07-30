@@ -40,3 +40,31 @@
 .read-the-docs {
   color: #888;
 }
+a {
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px; /* Thickness of the underline */
+  width: 100%;
+  background-color: white; /* Color of the underline */
+  transform-origin: left;
+  transform: scaleX(0); /* Initially, the underline is hidden */
+  opacity: 0; /* Initially, the underline is invisible */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for appearance */
+}
+
+/* This class will be applied to make the underline visible */
+.scale-x-100 {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.scale-x-0 {
+  transform: scaleX(0);
+  opacity: 0;
+}
