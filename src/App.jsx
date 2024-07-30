@@ -1,44 +1,37 @@
-// App.js
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import LandingPage from "./Components/LandingPage";
-import Marquee from "./Components/Marquee";
-import Eyes from "./Components/Eyes";
-import Featured from "./Components/Featured";
-import Cards from "./Components/Cards";
-import Ready from "./Components/Ready";
-import Footer from "./Components/Footer";
-import Services from "./Links/Services";
-import OurWorks from "./Links/OurWorks";
-import AboutUs from "./Links/AboutUs";
-import Insights from "./Links/Insights";
-import Contact from "./Links/Contact";
+import React from 'react';
+import Navbar from './Components/Navbar';
+import LandingPage from './Components/LandingPage';
+import Marquee from './Components/Marquee';
+import About from './Components/About';
+import Eyes from './Components/Eyes';
+import Featured from './Components/Featured';
+import Cards from './Components/Cards';
+import Ready from './Components/Ready';
+import Footer from './Components/Footer';
+import LocomotiveScroll from 'locomotive-scroll';
+
+
 
 function App() {
+  
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={
-          <div>
-            <LandingPage/>
-            <Marquee />
-            <Eyes />
-            <Featured />
-            <Cards />
-            <Ready />
-            <Footer />
-          </div>
-        } />
-        <Route path="/services" element={<Services />} />
-        <Route path="/our-works" element={<OurWorks />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/insights" element={<Insights />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+    <div className='w-full h-screen bg-zinc-900 text-white'>
+     <Navbar/>
+     <LandingPage/>
+     <Marquee/>
+     <About/>
+     <Eyes/>
+     <Featured/>
+     <Cards/>
+     <Ready/>
+     <Footer/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
+
