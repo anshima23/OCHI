@@ -5,7 +5,7 @@ function Marquee() {
   return (
     <div data-scroll data-scroll-section data-scroll-speed=".1" className='w-full bg-[#004D43] h-[35rem]'>
       <div className='flex gap-10 overflow-hidden whitespace-nowrap h-full items-center'>
-        {["We are ochi", "We are ochi", "We are ochi"].map((text, index) => (
+        {["We are Developers", "We are Developers", "We are Developers"].map((text, index) => (
           <motion.div 
             key={index}
             initial={{x:0}} 

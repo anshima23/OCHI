@@ -1,8 +1,14 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function Footer() {
   return (
-    <div className='relative flex w-full h-screen bg-zinc-900 p-20'>
+    <div 
+      data-scroll 
+      data-scroll-section 
+      data-scroll-speed="-.2" 
+      className='relative flex w-full h-screen bg-zinc-900 p-20'
+    >
       <div className='w-1/2 h-full flex flex-col justify-between font-["Founders_Grotesk_X-Condensed"]'>
         <div className="heading">
           <h1 className='text-[6vw] font-semibold uppercase leading-none mb-5'>EYE-</h1>
@@ -23,9 +29,10 @@ function Footer() {
       <div className="w-1/2">
         <h1 className='text-[4vw] font-semibold uppercase leading-none mb-10'>PRESENTATIONS</h1>
         <div className="dets font-['Neue_Montreal']">
-            <a href="#" className="block text-xl font-light mb-2">Facebook</a>
-            <a href="#" className="block text-xl font-light mb-2">Instagram</a>
-            <a href="#" className="block text-xl font-light">Twitter</a>
+          <a href="#" className="block text-xl font-light mb-2">Facebook</a>
+          <a href="#" className="block text-xl font-light mb-2">Instagram</a>
+          <a href="#" className="block text-xl font-light mb-2">Twitter</a>
+          <a href="#" className="block text-xl font-light">LinkedIn</a>
         </div>
       </div>
     </div>
