@@ -1,5 +1,4 @@
 // Navbar.jsx
-// Navbar.jsx
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { gsap } from "gsap";

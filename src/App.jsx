@@ -8,7 +8,13 @@ import Featured from './Components/Featured';
 import Cards from './Components/Cards';
 import Ready from './Components/Ready';
 import Footer from './Components/Footer';
+import Services from "./Links/Services";
+import OurWorks from "./Links/OurWorks";
+import AboutUs from "./Links/AboutUs";
+import Insights from "./Links/Insights";
+import Contact from "./Links/Contact";
 import LocomotiveScroll from 'locomotive-scroll';
+import { Routes, Route } from 'react-router-dom';
 
 
 
@@ -18,15 +24,26 @@ function App() {
 
   return (
     <div className='w-full h-screen bg-zinc-900 text-white'>
-     <Navbar/>
-     <LandingPage/>
-     <Marquee/>
-     <About/>
-     <Eyes/>
-     <Featured/>
-     <Cards/>
-     <Ready/>
-     <Footer/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={
+          <div>
+            <LandingPage/>
+            <Marquee />
+            <Eyes />
+            <About/>
+            <Featured />
+            <Cards />
+            <Ready />
+            <Footer />
+          </div>
+        } />
+        <Route path="/services" element={<Services />} />
+        <Route path="/our-works" element={<OurWorks />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   )
 }
