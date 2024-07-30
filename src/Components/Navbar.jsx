@@ -6,7 +6,7 @@ function Navbar() {
       <div className="logo">
         <svg
           width="72"
-          height="30"
+          height="30"n
           viewBox="0 0 72 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
