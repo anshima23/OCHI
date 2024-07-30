@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 function Navbar() {
   const linkRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(null);
+  const [overlayText, setOverlayText] = useState("");
   const navigate = useNavigate();
   const overlayRef = useRef(null);
 
@@ -56,13 +57,14 @@ function Navbar() {
     }
   };
 
-  const handleClick = (index, path) => {
+  const handleClick = (index, path, name) => {
     setActiveIndex(index);
+    setOverlayText(name);
 
     // Start overlay animation
     gsap.to(overlayRef.current, {
       y: 0,
-      duration: 0.5,
+      duration: 0.7,
       ease: "power2.out",
       onComplete: () => {
         // Navigate to the new path after the overlay animation is complete
@@ -70,8 +72,8 @@ function Navbar() {
 
         // Start the second part of the overlay animation
         gsap.to(overlayRef.current, {
-          y: "100%",
-          duration: 0.5,
+          y: "-100%",
+          duration: 0.7,
           ease: "power2.inOut",
         });
       },
@@ -83,9 +85,13 @@ function Navbar() {
       {/* Overlay */}
       <div
         ref={overlayRef}
-        className="fixed top-0 left-0 w-full h-full bg-black"
+        className="fixed top-0 left-0 w-full h-full bg-black flex items-center"
         style={{ transform: "translateY(100%)" }}
-      ></div>
+      >
+        <p className="text-white text-6xl font-bold absolute left-8 top-1/2 transform -translate-y-1/2">
+          {overlayText}
+        </p>
+      </div>
 
       {/* Navbar */}
       <div className="fixed z-[999] w-full px-20 py-8 font-['Neue Montreal'] flex justify-between items-center">
@@ -108,7 +114,7 @@ function Navbar() {
               className="relative text-lg capitalize font-light text-white overflow-hidden cursor-pointer"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
-              onClick={() => handleClick(index, item.path)}
+              onClick={() => handleClick(index, item.path, item.name)}
             >
               {item.name}
               <span
