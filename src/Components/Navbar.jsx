@@ -60,16 +60,19 @@ function Navbar() {
   const handleClick = (index, path, name) => {
     setActiveIndex(index);
     setOverlayText(name);
-
+  
+    // Ensure the overlay starts from the bottom
+    gsap.set(overlayRef.current, { y: "100%" });
+  
     // Start overlay animation
     gsap.to(overlayRef.current, {
-      y: 0,
+      y: "0%",
       duration: 0.7,
       ease: "power2.out",
       onComplete: () => {
         // Navigate to the new path after the overlay animation is complete
         navigate(path);
-
+  
         // Start the second part of the overlay animation
         gsap.to(overlayRef.current, {
           y: "-100%",
@@ -79,7 +82,7 @@ function Navbar() {
       },
     });
   };
-
+  
   return (
     <div>
       {/* Overlay */}
