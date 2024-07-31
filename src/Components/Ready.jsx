@@ -68,6 +68,9 @@ function Ready() {
           </div>
         </div>
       </div>
+
+
+      
         <div className="flex flex-col items-center mt-10 space-y-4">
           <button className="flex uppercase gap-4 items-center px-10 py-4 bg-zinc-900 rounded-full text-white">
             Read More
