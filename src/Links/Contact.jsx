@@ -51,7 +51,7 @@ function Contact() {
         data-scroll
         data-scroll-section
         data-scroll-speed="-0.3"
-        className="w-full h-screen bg-zinc-900 pt-10 mb-30 h-[150vh]"
+        className="w-full h-screen bg-zinc-900 pt-10 mb-30 h-[180vh]"
       >
         <div className="textstructure mt-20 px-20">
           {["LET'S START", "A PROJECT TOGETHER"].map((item, index) => (
@@ -147,58 +147,65 @@ function Contact() {
         data-scroll
         data-scroll-section
         data-scroll-speed="-.2"
-        className="relative flex flex-col w-full h-screen bg-zinc-900 p-20 border-2 h-[200vh]"
+        className="relative flex flex-col w-full h-screen bg-zinc-900 p-20 border-2 h-[500vh]"
       >
-
-           <h1 className="text-7xl mb-10">
-            A few things you
-            <br /> may want to ask us:
-          </h1>
-          <div className="w-full mt-1 border-b border-gray-300"></div>
+        <h1 className="text-7xl mb-10">
+          A few things you
+          <br /> may want to ask us:
+        </h1>
+        <div className="w-full mt-1 border-b border-gray-300"></div>
         <div className='w-full h-full flex flex-row justify-between font-["Founders_Grotesk_X-Condensed"]  mb-6 '>
-        <div className='w-1/2 h-full flex  p-5 '>
-              <h1>How many iterations the project includes?</h1>
-            </div>
-         
+          <div className="w-1/2 h-full flex  p-5 ">
+            <h1>How many iterations the project includes?</h1>
+          </div>
+
           <div>
-           
-
-            <div  className='p-5  '>
-              <h1 className='mb-10 '>Description:</h1>
+            <div className="p-5  ">
+              <h1 className="mb-10 ">Description:</h1>
               <div>
-              <p className='mb-10 '>
-                We’re committed to delighting every one of our clients and will
-                do<br/> everything to deliver on the project fully. We iterate as
-                much as<br/> needed to ensure the best result.
-              </p>
+                <p className="mb-10 ">
+                  We’re committed to delighting every one of our clients and
+                  will do
+                  <br /> everything to deliver on the project fully. We iterate
+                  as much as
+                  <br /> needed to ensure the best result.
+                </p>
               </div>
-              
-              <div >
-  <div className='mb-10'>
-    <div className='flex items-start'>
-      <span className='mr-10 text-xl font-bold'>1.</span>
-      <p className='leading-6'>
-        Based on our experience and ways of working, no<br />
-        more than three revisions are needed to meet<br />
-        clients’ expectations and business needs.
-      </p>
-    </div>
-  </div>
 
-  <div className='mb-10'>
-    <div className='flex items-start'>
-      <span className='mr-10 text-xl font-bold'>2.</span>
-      <p className='leading-6'>
-        If your project is something we are not capable of<br />
-        doing, we will say it right there and won’t commit.<br />
-        Instead, we will refer you to specialists in any field<br />
-        you need and we might know.
-      </p>
-    </div>
-  </div>
-</div>
+              <div>
+                <div className="mb-10">
+                  <div className="flex items-start">
+                    <span className="mr-10 text-xl font-bold">1.</span>
+                    <p className="leading-6">
+                      Based on our experience and ways of working, no
+                      <br />
+                      more than three revisions are needed to meet
+                      <br />
+                      clients’ expectations and business needs.
+                    </p>
+                  </div>
+                </div>
 
+                <div className="mb-10">
+                  <div className="flex items-start">
+                    <span className="mr-10 text-xl font-bold">2.</span>
+                    <p className="leading-6">
+                      If your project is something we are not capable of
+                      <br />
+                      doing, we will say it right there and won’t commit.
+                      <br />
+                      Instead, we will refer you to specialists in any field
+                      <br />
+                      you need and we might know.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <div className="w-full mt-1 border-b border-zinc-900"></div>
             </div>
+            
+
           </div>
         </div>
 
@@ -244,6 +251,8 @@ function Contact() {
             </div>
           </div>
         </div>
+
+        
       </div>
     </>
   );
