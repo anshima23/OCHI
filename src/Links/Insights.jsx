@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import Footer from "../Components/Footer"; 
 
 const boxData = [
-  { number: 1, text: "Insight into Node.js" },
-  { number: 2, text: "React Native Strategies" },
-  { number: 3, text: "MongoDB Best Practices" },
+  { number: 1, text: " Node.js" },
+  { number: 2, text: "React Native" },
+  { number: 3, text: "MongoDB" },
 ];
 
 function Insights() {
@@ -55,7 +55,7 @@ function Insights() {
       </div>
 
 
-      <div className="w-full bg-[#004D43] h-[35rem]" p-10>
+      <div className="w-full bg-[#004D43] h-[35rem]" p-8>
         <div className="flex gap-10 overflow-hidden whitespace-nowrap h-full items-center">
           {["We are Developers", "We are Developers", "We are Developers"].map((text, index) => (
             <motion.div
@@ -74,29 +74,31 @@ function Insights() {
       </div>
 
       <div data-scroll data-scroll-section data-scroll-speed="-0.1" className="w-full bg-[#004D43] text-black p-40">
-        <div className="w-full flex gap-5 border-[#a1b562] border-b-2">
-          <div className="w-1/2 flex items-start">
-            <span className="text-2xl border-b-2 border-black">What you can expect:</span>
-          </div>
-          <div className="w-1/2">
-            <div className="grid grid-row-3 gap-5">
-              {boxData.map(({ number, text }) => (
-                <div
-                  key={number}
-                  className="text-5xl h-[35vh] rounded-3xl bg-[#1a6157] flex flex-col justify-between p-5"
-                >
-                  <div className="flex items-start justify-start">
-                    <span className="text-white text-5xl">{number < 10 ? `0${number}` : number}</span>
-                  </div>
-                  <div className="flex items-end justify-start w-full">
-                    <span className="text-white text-sm border-b border-white">{text}</span>
-                  </div>
-                </div>
-              ))}
+  <div className="w-full flex gap-5 border-[#a1b562] border-b-2">
+    <div className="w-1/2 flex items-start">
+      <span className="text-2xl border-b-2 border-black">What you can expect:</span>
+    </div>
+    <div className="w-[85%]">
+      <div className="grid grid-cols-3 gap-5">
+        {boxData.map(({ number, text }) => (
+          <div
+            key={number}
+            className="text-5xl h-[35vh] rounded-3xl bg-[#1a6157] flex flex-col justify-between p-5"
+          >
+            <div className="flex items-start justify-start">
+              <span className="text-white text-5xl">{number < 10 ? `0${number}` : number}</span>
+            </div>
+            <div className="flex items-end justify-start w-full">
+              <span className="text-white text-sm border-b border-white">{text}</span>
             </div>
           </div>
-        </div>
+        ))}
       </div>
+    </div>
+  </div>
+</div>
+
+      
       <Footer />
     </>
   );
