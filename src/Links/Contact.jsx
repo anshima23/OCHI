@@ -60,7 +60,7 @@ function Contact() {
           data-scroll
           data-scroll-section
           data-scroll-speed="-0.3"
-          className="w-full h-screen bg-zinc-900 pt-10 mb-30 h-[200vh]"
+          className="w-full h-screen bg-zinc-900 pt-10 mb-30 h-[250vh]"
         >
           {/* Upper heading */}
           <div className="textstructure mt-20 px-20">
@@ -216,15 +216,15 @@ function Contact() {
             </div>
           </div>
 
-          <div className="w-full mt-1 border-b border-gray-300"></div>
+          <div className="w-full mt-1 border-b border-gray-300 "></div>
 
           {box1Texts.map((text, rowIndex) => (
             <div key={rowIndex}>
-              <div className="w-full flex justify-center mb-15">
+              <div className="w-full flex justify-center mb-15 text-black">
                 <div className="w-[53%] p-4 border-gray-300">{text}</div>
                 <div className="w-[23%] p-4 border-gray-300">Description:</div>
                 <div
-                  className="w-[23%] p-4 border-gray-300"
+                  className="w-[23%] p-4 border-gray-300 text-black"
                   style={{
                     position: "relative",
                     display: "inline-block",
@@ -235,7 +235,7 @@ function Contact() {
                       position: "absolute",
                       bottom: 0,
                       left: 0,
-                      width: "20%",
+                      width: "30%",
                       height: "2px", // Adjust thickness
                       backgroundColor: "#000", // Adjust color
                     }}
