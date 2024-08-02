@@ -11,7 +11,7 @@ const Box = ({ color, text, imageUrl }) => (
         <img
           src={imageUrl}
           alt={text}
-          className="w-full h-2/3 object-cover rounded-lg mb-4"  // Adjust as needed
+          className="w-full h-2/3 object-cover rounded-lg mb-4" // Adjust as needed
         />
       )}
       <div className="text-center text-xl">{text}</div>
@@ -44,7 +44,7 @@ function OurWorks() {
   const Eye = () => (
     <div
       className="flex items-center justify-center w-[22vw] h-[22vw] rounded-full bg-zinc-100"
-      style={{ zIndex: 0 }}  
+      style={{ zIndex: 0 }}
     >
       <div className="relative w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900">
         <div
@@ -64,17 +64,17 @@ function OurWorks() {
 
   return (
     <>
-      <div  className="w-full h-screen flex flex-col items-start bg-[#CDEA68] px-10 pt-10 text-black relative">
+      <div className="w-full h-screen flex flex-col items-start bg-[#CDEA68] px-10 pt-10 text-black relative">
         <h1 className="text-8xl text-black mb-4 mt-[150px]">WORK</h1>
 
         {/* Eye and Box Section */}
-        <div  className="relative flex flex-col items-center gap-2 mb-0 bottom-0 left-1/2 transform -translate-x-1/2">
+        <div className="relative flex flex-col items-center gap-2 mb-0 bottom-0 left-1/2 transform -translate-x-1/2">
           {/* Boxes overlapping the eyes */}
-          <div 
+          <div
             className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col gap-2"
-            style={{ zIndex: 1 }}  
+            style={{ zIndex: 1 }}
           >
-            <div 
+            <div
               className="w-[60vw] h-[17vh] ml-10 bg-[#9cb34b] text-white flex items-center justify-center rounded-lg"
               style={{ marginTop: "-5rem" }}
             ></div>
@@ -92,7 +92,12 @@ function OurWorks() {
         </div>
       </div>
 
-      <div   data-scroll data-scroll-section data-scroll-speed="-0.3" className="w-full flex flex-col items-center bg-gray-900 py-16">
+      <div
+        data-scroll
+        data-scroll-section
+        data-scroll-speed="-0.3"
+        className="w-full flex flex-col items-center bg-gray-900 py-16"
+      >
         {/* Heading Section */}
         <div className="w-full max-w-screen-xl flex items-center justify-center mb-10">
           <h1 className="text-5xl text-white text-center">
@@ -104,15 +109,21 @@ function OurWorks() {
           </h1>
         </div>
 
-         {/* Box Rows */}
-         <div className="w-full max-w-screen-xl flex flex-col gap-10">
+        {/* Box Rows */}
+        <div className="w-full max-w-screen-xl flex flex-col gap-10">
           <div className="w-full flex gap-10">
-            <Box color="bg-gray-200" text="box1" imageUrl="path/to/your-image1.jpg" />
-            <Box color="bg-gray-100" text="box2" imageUrl="path/to/your-image2.jpg" />
+            <Box
+              color="bg-gray-200"
+              imageUrl="https://ochi.design/wp-content/uploads/2022/05/017091720030-1340x858.jpg"
+            />
+            <Box
+              color="bg-gray-100"
+              imageUrl="https://images.unsplash.com/photo-1569098644584-210bcd375b59?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
           </div>
           <div className="w-full flex gap-10">
-            <Box color="bg-gray-200" text="box3" imageUrl="path/to/your-image3.jpg" />
-            <Box color="bg-gray-100" text="box4" imageUrl="path/to/your-image4.jpg" />
+            <Box color="bg-gray-200" imageUrl="https://images.unsplash.com/photo-1580983703451-bf6bb44a9917?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGVuZ2luZWVyaW5nfGVufDB8fDB8fHww" />
+            <Box color="bg-gray-100" imageUrl="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
           </div>
         </div>
       </div>

@@ -37,23 +37,31 @@ function Insights() {
           </div>
         </div>
 
-        {/* PART 3: Grid Structure for Boxes */}
-        <div className="w-full h-[55vh] flex flex-col items-center mt-10 mb-20 px-5">
+         {/* PART 3: Grid Structure for Boxes */}
+         <div className="w-full h-[55vh] flex flex-col items-center mt-10 mb-20 px-5">
           <div className="w-full max-w-4xl grid grid-cols-2 gap-5">
             <div className="flex flex-col gap-1">
-              <div className="h-[40vh] bg-gray-700 text-white p-4 rounded-lg shadow-md">
-                Big Box
+              <div className="h-[40vh] bg-gray-700 text-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1683120966127-14162cdd0935?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  // Replace with your image URL
+                  alt="Big Box Image"
+                  className="w-full h-full object-cover rounded-lg"  // Adjust as needed
+                />
               </div>
-              <div className="bg-gray-600 text-white p-4 rounded-lg shadow-md">
-                Text for Big Box
+              <div className=" text-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                <p>AI enhances problem-solving and innovation for engineers</p>
               </div>
             </div>
             <div className="flex flex-col gap-1">
-              <div className="h-[35vh] bg-gray-400 text-white p-4 rounded-lg shadow-md">
-                Small Box
+              <div className="h-[35vh] bg-gray-400 text-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  // Replace with your image URL
+                  alt="Small Box Image"
+                  className="w-full h-full object-cover rounded-lg"  // Adjust as needed
+                />
               </div>
-              <div className="bg-gray-300 text-white p-4 rounded-lg shadow-md">
-                Text for Small Box
+              <div className=" text-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                <p>Technology drives efficiency, innovation, and precision in engineering processes.</p>
               </div>
             </div>
           </div>
