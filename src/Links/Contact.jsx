@@ -53,11 +53,11 @@ function Contact() {
   }, []);
 
   const textVariants = {
-    initial: { y: "0", opacity: 1 },
+    initial: { y: "100%", opacity: 0 },
     animate: { y: 0, opacity: 1 },
     exit: { y: "-100%", opacity: 0 }
   };
-  
+
   const textTransition = {
     duration: 0.5,
     ease: "easeOut"
@@ -128,67 +128,64 @@ function Contact() {
         <div className="w-full h-[20vh] bg-transparent"></div> {/* Adjust height as needed */}
 
         {/* Instagram Facebook Section */}
-        <div>
-      {/* Instagram Facebook Section */}
-      <div
-        data-scroll
-        data-scroll-section
-        data-scroll-speed=".02"
-        className="w-full min-h-screen py-40 bg-[#CDEA68] rounded-tl-3xl rounded-tr-3xl text-black flex flex-col items-center justify-center"
-      >
-        {/* Text and Buttons */}
-        <div className="flex flex-col items-center relative z-10">
-          <h1 className="font-['Neue_Montreal'] text-[10vw] leading-[10vw] tracking-tight text-center">
-            {["INSTAGRAM", "BEHANCE", "FACEBOOK", "LINKEDIN"].map((text, index) => (
-              <motion.span
-                key={index}
-                className="block relative"
-                initial="initial"
-                whileHover="animate"
-                exit="exit"
-                variants={textVariants}
-                transition={textTransition}
-              >
-                {text.split("").map((char, charIndex) => (
-                  <motion.span
-                    key={charIndex}
-                    className="inline-block"
-                    variants={textVariants}
-                    transition={{ ...textTransition, delay: charIndex * 0.05 }}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </motion.span>
-            ))}
-          </h1>
+        <div
+          data-scroll
+          data-scroll-section
+          data-scroll-speed=".02"
+          className="w-full min-h-screen py-40 bg-[#CDEA68] rounded-tl-3xl rounded-tr-3xl text-black flex flex-col items-center justify-center"
+        >
+          {/* Text and Buttons */}
+          <div className="flex flex-col items-center relative z-10">
+            <h1 className="font-['Neue_Montreal'] text-[10vw] leading-[10vw] tracking-tight text-center">
+              {["INSTAGRAM", "BEHANCE", "FACEBOOK", "LINKEDIN"].map((text, index) => (
+                <motion.span
+                  key={index}
+                  className="block relative"
+                  initial="initial"
+                  whileHover="animate"
+                  exit="exit"
+                  variants={textVariants}
+                  transition={textTransition}
+                >
+                  {text.split("").map((char, charIndex) => (
+                    <motion.span
+                      key={charIndex}
+                      className="inline-block"
+                      variants={textVariants}
+                      transition={{ ...textTransition, delay: charIndex * 0.05 }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </motion.span>
+              ))}
+            </h1>
 
-          {/* Eyes positioned above the text */}
-          <div className="absolute flex gap-10 top-[10%]">
-            {[0, 1].map((i) => (
-              <div
-                key={i}
-                className="flex items-center justify-center w-[12vw] h-[12vw] rounded-full bg-zinc-100"
-              >
-                <div className="relative w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900">
-                  <div
-                    style={{
-                      transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                    }}
-                    className="line w-full h-10"
-                  >
-                    <div className="w-8 h-8 rounded-full bg-zinc-100"></div>
+            {/* Eyes positioned above the text */}
+            <div className="absolute flex gap-10 top-[10%]">
+              {[0, 1].map((i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-center w-[12vw] h-[12vw] rounded-full bg-zinc-100"
+                >
+                  <div className="relative w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900">
+                    <div
+                      style={{
+                        transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                      }}
+                      className="line w-full h-10"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-zinc-100"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
         {/* Ask Something Section */}
         <div className="relative flex flex-col w-full h-screen bg-zinc-900 p-20 border-2">
