@@ -11,17 +11,13 @@ function Featured() {
         <div className='px-20'>
         <div className="cards w-full flex gap-10 mt-10">  
                 <div className='cardcontainer relative w-1/2 h-[75vh]'>
-                <h1 className="absolute text-[#CDEA68] left-full -translate-x-1/2 top-1/2 -translate-y-1/2 z-[9] leading-none tracking-tighter text-8xl">FYDE</h1>
                 <div className="card w-full h-full rounded-xl overflow-hidden">
-                <img className="w-full h-full bg-cover" src="https://ochi.design/wp-content/uploads/2023/09/Fyde7-550x500.png" alt="FYDE"/>
+                <img className="w-full h-full bg-cover" src="https://cdn.pixabay.com/photo/2024/02/26/09/17/synthetic-8597464_1280.jpg" alt="FYDE"/>
                 </div>
                 </div>
                 <div className='cardcontainer relative w-1/2 h-[75vh]'>
                 <div className="card w-full h-full rounded-xl overflow-hidden">
-                <h1 className="absolute text-[#CDEA68] right-full translate-x-1/2 top-1/2 translate-y-1/2 z-[9] leading-none tracking-tighter text-8xl">
-                {"VISE".split('').map((item, index) => <span key={index}>{item}</span>)}
-                </h1>
-                <img className="w-full h-full bg-cover" src="https://ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg" alt="VISE"/>
+                <img className="w-full h-full bg-cover" src="https://media.istockphoto.com/id/1257980223/photo/smart-office-concept.jpg?s=2048x2048&w=is&k=20&c=vWdtNMrKMS4mOZFF4jOqtCOOvDoXrQrWIPkGnHXKR6o=" alt="VISE"/>
                 </div>
                 </div>
         </div>

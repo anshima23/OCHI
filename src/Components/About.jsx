@@ -17,7 +17,13 @@ function About() {
             <div className="w-2 h-2 bg-zinc-100 rounded-full"></div>
           </button>
         </div>
-        <div className="w-1/2 h-[70vh] rounded-3xl bg-[#b0c859]"></div>
+        <div className="w-1/2 h-[70vh] rounded-3xl bg-[#b0c859] overflow-hidden relative">
+          <img 
+            src="https://cdn.pixabay.com/photo/2024/05/15/20/23/ai-generated-8764468_1280.png" 
+            alt="Description" 
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
       </div>
     </div>
   );
