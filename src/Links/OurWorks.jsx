@@ -2,11 +2,20 @@ import React, { useEffect, useState } from "react";
 import Ready from "../Components/Ready"; // Adjust the path based on your folder structure
 import Footer from "../Components/Footer"; // Adjust the path based on your folder structure
 
-const Box = ({ color, text }) => (
+const Box = ({ color, text, imageUrl }) => (
   <div
     className={`w-1/2 h-[80vh] ${color} text-white p-12 flex items-center justify-center rounded-lg`}
   >
-    <div className="text-center text-xl">{text}</div>
+    <div className="flex flex-col items-center justify-center w-full h-full">
+      {imageUrl && (
+        <img
+          src={imageUrl}
+          alt={text}
+          className="w-full h-2/3 object-cover rounded-lg mb-4"  // Adjust as needed
+        />
+      )}
+      <div className="text-center text-xl">{text}</div>
+    </div>
   </div>
 );
 
@@ -95,15 +104,15 @@ function OurWorks() {
           </h1>
         </div>
 
-        {/* Box Rows */}
-        <div className="w-full max-w-screen-xl flex flex-col gap-10">
+         {/* Box Rows */}
+         <div className="w-full max-w-screen-xl flex flex-col gap-10">
           <div className="w-full flex gap-10">
-            <Box color="bg-gray-200" text="box1" />
-            <Box color="bg-gray-100" text="box2" />
+            <Box color="bg-gray-200" text="box1" imageUrl="path/to/your-image1.jpg" />
+            <Box color="bg-gray-100" text="box2" imageUrl="path/to/your-image2.jpg" />
           </div>
           <div className="w-full flex gap-10">
-            <Box color="bg-gray-200" text="box3" />
-            <Box color="bg-gray-100" text="box4" />
+            <Box color="bg-gray-200" text="box3" imageUrl="path/to/your-image3.jpg" />
+            <Box color="bg-gray-100" text="box4" imageUrl="path/to/your-image4.jpg" />
           </div>
         </div>
       </div>
