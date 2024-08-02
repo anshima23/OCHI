@@ -55,17 +55,17 @@ function OurWorks() {
 
   return (
     <>
-      <div className="w-full h-screen flex flex-col items-start bg-[#CDEA68] px-10 pt-10 text-black relative">
+      <div  className="w-full h-screen flex flex-col items-start bg-[#CDEA68] px-10 pt-10 text-black relative">
         <h1 className="text-8xl text-black mb-4 mt-[150px]">WORK</h1>
 
         {/* Eye and Box Section */}
-        <div className="relative flex flex-col items-center gap-2 mb-0 bottom-0 left-1/2 transform -translate-x-1/2">
+        <div  className="relative flex flex-col items-center gap-2 mb-0 bottom-0 left-1/2 transform -translate-x-1/2">
           {/* Boxes overlapping the eyes */}
-          <div
+          <div 
             className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col gap-2"
             style={{ zIndex: 1 }}  
           >
-            <div
+            <div 
               className="w-[60vw] h-[17vh] ml-10 bg-[#9cb34b] text-white flex items-center justify-center rounded-lg"
               style={{ marginTop: "-5rem" }}
             ></div>
@@ -83,7 +83,7 @@ function OurWorks() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center bg-gray-900 py-16">
+      <div   data-scroll data-scroll-section data-scroll-speed="-0.3" className="w-full flex flex-col items-center bg-gray-900 py-16">
         {/* Heading Section */}
         <div className="w-full max-w-screen-xl flex items-center justify-center mb-10">
           <h1 className="text-5xl text-white text-center">
