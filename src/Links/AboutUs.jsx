@@ -28,6 +28,17 @@ function AboutUs() {
     };
   }, []); // Empty dependency array means this effect runs only once when the component mounts
 
+  const headingVariants = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -50 },
+  };
+
+  const headingTransition = {
+    duration: 0.8,
+    ease: "easeOut",
+  };
+
   return (
     <>
     <div data-scroll data-scroll-speed=".1"   className="w-full h-screen bg-zinc-900 pt-1">
@@ -51,52 +62,58 @@ function AboutUs() {
 
     <div  className='relative w-full h-full bg-cover bg-center bg-[url("https://ochi.design/wp-content/uploads/2022/05/Workiz_1-1340x740.jpg")]'></div>
 
-    <div data-scroll data-scroll-speed="-.3" className="w-full custom-height h-screen bg-zinc-900 pt-1 relative">
-    <h1 className="absolute bottom-0 left-0 mb-8 ml-8 text-white text-7xl">
-          We save businesses from ugly and<br/> ineffective designs.
-        </h1>
-        {/* Eyes positioned in the center */}
-        <div className='absolute inset-0 flex items-center justify-center'>
-        
-          <div className='flex gap-10'>
-            <div className='flex items-center justify-center w-[18vw] h-[18vw] rounded-full bg-zinc-100'>
-              <div className='relative w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900'>
-                <div
-                  style={{
-                    transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                  }}
-                  className="line w-full h-10"
-                >
-                  <div className='w-12 h-12 rounded-full bg-zinc-100'></div>
-                </div>
+   <div data-scroll data-scroll-speed="-.3" className="w-full custom-height h-screen bg-zinc-900 pt-1 relative">
+      {/* Animated Heading */}
+      <motion.h1
+        className="absolute bottom-0 left-0 mb-8 ml-8 text-white text-7xl"
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={headingVariants}
+        transition={headingTransition}
+      >
+        We save businesses from ugly and<br /> ineffective designs.
+      </motion.h1>
+
+      {/* Eyes positioned in the center */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="flex gap-10">
+          <div className="flex items-center justify-center w-[18vw] h-[18vw] rounded-full bg-zinc-100">
+            <div className="relative w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900">
+              <div
+                style={{
+                  transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                }}
+                className="line w-full h-10"
+              >
+                <div className="w-12 h-12 rounded-full bg-zinc-100"></div>
               </div>
             </div>
-            <div className='flex items-center justify-center w-[18vw] h-[18vw] rounded-full bg-zinc-100'>
-              <div className='relative w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900'>
-                <div
-                  style={{
-                    transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                  }}
-                  className="line w-full h-10"
-                >
-                  <div className='w-12 h-12 rounded-full bg-zinc-100'></div>
-                </div>
+          </div>
+          <div className="flex items-center justify-center w-[18vw] h-[18vw] rounded-full bg-zinc-100">
+            <div className="relative w-2/3 h-2/3 flex items-center justify-center rounded-full bg-zinc-900">
+              <div
+                style={{
+                  transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                }}
+                className="line w-full h-10"
+              >
+                <div className="w-12 h-12 rounded-full bg-zinc-100"></div>
               </div>
             </div>
           </div>
         </div>
-
-         
-        {/* Heading positioned at the bottom-left corner */}
-       
-        <div className="border-t-[2px] border-zinc-800 mt-32 flex justify-between items-center py-5 px-20"></div>
       </div>
+
+      {/* Border */}
+      <div className="border-t-[2px] border-zinc-800 mt-32 flex justify-between items-center py-5 px-20"></div>
+    </div>
       <Ready />
       <Footer />
    </>
