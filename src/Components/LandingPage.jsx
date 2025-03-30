@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link, useNavigate } from "react-router-dom";
 import { FaArrowUpLong } from 'react-icons/fa6';
 
 function LandingPage() {
   return (
     <div className='w-full h-screen bg-zinc-900 pt-1'>
       <div className='textstructure mt-20 px-4 md:px-12'>
-        {["We Create", "Eye Opening", "Innovations"].map((item, index) => (
+        {["Smart fixes", "for smooth ", "journeys!"].map((item, index) => (   
           <div className="masker mb-6" key={index}>
             <div className="w-fit flex items-end overflow-hidden">
               {index === 1 && (
@@ -20,18 +21,20 @@ function LandingPage() {
         ))}
       </div>
       <div className="border-t-[1px] border-zinc-800 mt-20 flex flex-col md:flex-row justify-between items-center py-5 px-4 md:px-12">
-        {["For public and private companies", "From the first pitch to IPO"].map((item, index) => (
+        {["Expert care, endless adventures ahead!", "Drive worry-free with precision repairs!"].map((item, index) => (
           <p key={index} className="text-sm md:text-base font-light tracking-tight leading-none">
             {item}
           </p>
         ))}
         <div className="start flex flex-col md:flex-row items-center gap-4 md:gap-6 mt-5 md:mt-0">
           <div className="px-3 py-2 border-[2px] border-zinc-500 font-light text-xs md:text-sm capitalize rounded-full">
-            Start the project
+            Explore Services we provide
           </div>
+          <Link to="/services">
           <div className="w-8 h-8 flex items-center justify-center border-[2px] border-zinc-500 rounded-full">
             <FaArrowUpLong />
           </div>
+          </Link>
         </div>
       </div>
     </div>
