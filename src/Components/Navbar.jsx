@@ -92,7 +92,7 @@ function Navbar() {
         <p className="text-white text-6xl font-bold">{overlayText}</p>
       </div>
       <div className="fixed z-[999] w-full px-4 md:px-10 py-4 md:py-6 font-['Neue Montreal'] flex justify-between items-center bg-black bg-opacity-50">
-        <h1 className="text-xl md:text-2xl font-bold border-b-4 border-white pb-2">Developers</h1>
+        <h1 className="text-xl md:text-2xl font-bold border-b-4 border-white pb-2">FixMyRide</h1>
         <div className="flex gap-4 md:gap-8">
           {navItems.map((item, index) => (
             <Link
